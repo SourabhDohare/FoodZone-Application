@@ -6,10 +6,11 @@ import SearchResults from "./components/SearchResults";
 // just to get full control of what user is typing (for complete control)
 // but in case of button we are just responsding to the action done by user so "onClick" (control is by default)
 
-export const BASE_URL = "http://localhost:9000";
+// export const BASE_URL = "http://localhost:9000";
+export const BASE_URL = "https://foodzone-application.onrender.com";
 
 const App = () => {
-  // ✅ All hooks at top
+  // All hooks at top
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
