@@ -44,13 +44,28 @@ const App = () => {
   const filters = ["All", "Breakfast", "Lunch", "Dinner"];
 
   // AFTER all hooks
-  if (error) {
-    return <div> {error}</div>;
-  }
+ if (error) {
+  return (
+    <StatusContainer>
+      <ErrorCard>
+        <h2>⚠️ Something went wrong</h2>
+        <p>{error}</p>
+        <RetryButton onClick={() => window.location.reload()}>
+          Try Again
+        </RetryButton>
+      </ErrorCard>
+    </StatusContainer>
+  );
+}
 
-  if (loading) {
-    return <div>loading.....</div>;
-  }
+if (loading) {
+  return (
+    <StatusContainer>
+      <Loader />
+      <LoadingText>Loading delicious food...</LoadingText>
+    </StatusContainer>
+  );
+}
 
   return (
     <>
@@ -166,5 +181,70 @@ const Button = styled.button`
 
   &:hover {
     background-color: #ff4343;
+  }
+`;
+
+const StatusContainer = styled.div`
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a1a1a;
+  color: white;
+`;
+
+const Loader = styled.div`
+  width: 60px;
+  height: 60px;
+  border: 6px solid #444;
+  border-top: 6px solid #ff4343;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+`;
+
+const LoadingText = styled.p`
+  margin-top: 20px;
+  font-size: 18px;
+  color: #ccc;
+`;
+
+const ErrorCard = styled.div`
+  background-color: #2a2a2a;
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+
+  h2 {
+    margin-bottom: 15px;
+    color: #ff6b6b;
+  }
+
+  p {
+    margin-bottom: 20px;
+    color: #ccc;
+  }
+`;
+
+const RetryButton = styled.button`
+  padding: 10px 20px;
+  background-color: #ff4343;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s ease;
+
+  &:hover {
+    background-color: #ff6b6b;
   }
 `;
