@@ -9,12 +9,17 @@
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
-   "dependencies": {
+  "dependencies": {
+    "jspdf": "^4.2.0",
+    "qrcode": "^1.5.4",
+    "qrcode.react": "^4.2.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "styled-components": "^6.3.9"
+    "react-router-dom": "^7.13.0",
+    "styled-components": "^6.3.9",
+    "uuid": "^13.0.0"
   },
-   "devDependencies": {
+  "devDependencies": {
     "@eslint/js": "^9.39.1",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
