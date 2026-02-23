@@ -12,7 +12,8 @@ app.use("/images", express.static(path.join(__dirname, "../public/images")));
 app.get("/", (req, res) => {
   console.log(path.join(__dirname, "../public"));
   const foodData = [
-     {
+    {  
+      id:1,
       name: "Boiled Egg",
       price: 10,
       text: "Perfectly boiled farm-fresh eggs served with salt and pepper.",
@@ -20,6 +21,7 @@ app.get("/", (req, res) => {
       type: "breakfast",
     },
     {
+      id:2,
       name: "Ramen",
       price: 25,
       text: "Authentic Japanese ramen served in a rich savory broth.",
@@ -27,6 +29,7 @@ app.get("/", (req, res) => {
       type: "lunch",
     },
     {
+      id:3,
       name: "Grilled Chicken",
       price: 45,
       text: "Juicy grilled chicken seasoned with herbs and spices.",
@@ -34,6 +37,7 @@ app.get("/", (req, res) => {
       type: "dinner",
     },
     {
+      id:4,
       name: "Cake",
       price: 18,
       text: "Soft sponge cake layered with creamy frosting.",
@@ -41,6 +45,7 @@ app.get("/", (req, res) => {
       type: "breakfast",
     },
     {
+      id:5,
       name: "Burger",
       price: 23,
       text: "Classic cheeseburger with lettuce and signature sauce.",
@@ -48,6 +53,7 @@ app.get("/", (req, res) => {
       type: "lunch",
     },
     {
+      id:6,
       name: "Pancake",
       price: 25,
       text: "Fluffy pancakes topped with maple syrup.",
@@ -55,9 +61,8 @@ app.get("/", (req, res) => {
       type: "dinner",
     },
 
-    // 🔥 Additional 10 (Reusing same images)
-
     {
+      id:7,
       name: "Masala Omelette",
       price: 15,
       text: "Spicy masala omelette with onions and green chilies.",
@@ -65,6 +70,7 @@ app.get("/", (req, res) => {
       type: "breakfast",
     },
     {
+      id:8,
       name: "Chocolate Pastry",
       price: 20,
       text: "Rich chocolate pastry with creamy layers.",
@@ -72,6 +78,7 @@ app.get("/", (req, res) => {
       type: "breakfast",
     },
     {
+      id:9,
       name: "Chicken Burger",
       price: 28,
       text: "Crispy chicken patty burger with fresh veggies.",
@@ -79,6 +86,7 @@ app.get("/", (req, res) => {
       type: "lunch",
     },
     {
+      id:10,
       name: "Veg Ramen",
       price: 22,
       text: "Vegetarian ramen packed with fresh vegetables.",
@@ -86,6 +94,7 @@ app.get("/", (req, res) => {
       type: "lunch",
     },
     {
+      id:11,
       name: "Double Patty Burger",
       price: 35,
       text: "Loaded burger with double patty and melted cheese.",
@@ -93,6 +102,7 @@ app.get("/", (req, res) => {
       type: "lunch",
     },
     {
+      id:12,
       name: "Roast Chicken",
       price: 50,
       text: "Slow-roasted chicken served with herb seasoning.",
@@ -100,6 +110,7 @@ app.get("/", (req, res) => {
       type: "dinner",
     },
     {
+      id:13,
       name: "Honey Pancake",
       price: 27,
       text: "Golden pancakes topped with honey drizzle.",
@@ -107,6 +118,7 @@ app.get("/", (req, res) => {
       type: "dinner",
     },
     {
+      id:14,
       name: "Spicy Chicken",
       price: 48,
       text: "Spicy grilled chicken cooked with special spices.",
@@ -114,6 +126,7 @@ app.get("/", (req, res) => {
       type: "dinner",
     },
     {
+      id:15,
       name: "Cream Cake",
       price: 19,
       text: "Fresh cream cake with soft sponge layers.",
@@ -121,6 +134,7 @@ app.get("/", (req, res) => {
       type: "breakfast",
     },
     {
+      id:16,
       name: "Egg Delight",
       price: 12,
       text: "Simple yet delicious egg dish for quick breakfast.",
@@ -128,6 +142,7 @@ app.get("/", (req, res) => {
       type: "breakfast",
     },
     {
+      id:17,
       name: "Classic Ramen Bowl",
       price: 30,
       text: "Hot ramen bowl with rich broth and perfectly cooked noodles.",
@@ -135,6 +150,7 @@ app.get("/", (req, res) => {
       type: "lunch",
     },
     {
+      id:18,
       name: "Mini Chicken Platter",
       price: 40,
       text: "Grilled chicken pieces served with dipping sauce.",
